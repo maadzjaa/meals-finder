@@ -1,18 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Category, Meal } from '../../types';
+import { fetchData } from '../../utils';
+import { Link } from 'react-router-dom';
 
-type Meal = { strMeal: string; strMealThumb: string; strInstructions: string };
-type Category = { strCategory: string };
 const randomMealUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
 const categoriesMealUrl = 'https://www.themealdb.com/api/json/v1/1/list.php?c=list';
 
-async function fetchData(url: string) {
-	const result = await fetch(url);
-	const data = await result.json();
-
-	return data;
-}
-
-function App() {
+function Homepage() {
 	const [meal, setMeal] = useState<Meal | null>(null);
 	const [categories, setCategories] = useState<Category[] | null>(null);
 
@@ -25,7 +19,6 @@ function App() {
 		const fetchCategories = async () => {
 			const data = await fetchData(categoriesMealUrl);
 			const mealCategories = data.meals;
-			console.log(mealCategories);
 			setCategories(mealCategories);
 		};
 		fetchRandomMeal();
@@ -34,7 +27,8 @@ function App() {
 
 	async function handleRandomMealClick() {
 		const data = await fetchData(randomMealUrl);
-		setMeal(data);
+		const randomMeal = data.meals[0];
+		setMeal(randomMeal);
 	}
 
 	return (
@@ -43,7 +37,11 @@ function App() {
 			<ul className='category-list'>
 				{categories &&
 					categories.map((category) => {
-						return <li>{category.strCategory}</li>;
+						return (
+							<li className='category-list-item'>
+								<Link to={`/categories/${category.strCategory.toLowerCase()}`}>{category.strCategory}</Link>
+							</li>
+						);
 					})}
 			</ul>
 			<h2 className='header'>Meal of the day</h2>
@@ -65,4 +63,4 @@ function App() {
 	);
 }
 
-export default App;
+export default Homepage;
