@@ -21,15 +21,16 @@ export function SingleMealPage() {
 
 	return (
 		<>
-			<h1>Meal id: {id}</h1>
-
-			<div className='wrapper'>
+			<div className='single-meal-wrapper'>
 				{meal ? (
-					<div className='single-meal-wrapper'>
+					<>
 						<h2>Meal name: {meal.strMeal}</h2>
 						<img className='single-meal-img' src={meal.strMealThumb} alt={meal.strMeal} />
-						<p className='single-meal-description'>{meal.strInstructions}</p>
-					</div>
+                        <h3>Ingredients:</h3>
+						<div className='single-meal-description'>
+							<p>{meal.strInstructions}</p>
+						</div>
+					</>
 				) : (
 					<p>Loading...</p>
 				)}

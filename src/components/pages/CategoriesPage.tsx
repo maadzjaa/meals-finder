@@ -27,7 +27,7 @@ export function CategoriesPage() {
 				{categoryMeal &&
 					categoryMeal.map((category) => {
 						return (
-							<li>
+							<li className='category-list-item'>
 								<div className='category-meal-wrapper'>
 									<img className='meal-img' src={category.strMealThumb} alt='' />
 									<h3 className='category-meal-name'>{category.strMeal}</h3>
