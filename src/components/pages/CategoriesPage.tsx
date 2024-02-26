@@ -1,15 +1,15 @@
 import { useParams } from 'react-router-dom';
 import { fetchData } from '../../utils';
 import { useEffect, useState } from 'react';
-import { CategoryMeal } from '../../types';
+import { Meal } from '../../types';
 import { RootLayout } from '../templates/RootLayout';
-import { Link } from 'react-router-dom';
+import { MealCard } from '../molecules/MealCard';
 
 const mealFromCategoryUrl = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 
 export function CategoriesPage() {
 	const { category } = useParams();
-	const [categoryMeal, setCategoryMeal] = useState<CategoryMeal[] | null>(null);
+	const [categoryMeal, setCategoryMeal] = useState<Meal[] | null>(null);
 
 	useEffect(() => {
 		const fetchCategoryMeal = async () => {
@@ -30,12 +30,7 @@ export function CategoriesPage() {
 					categoryMeal.map((category) => {
 						return (
 							<li className='category-list-item'>
-								<Link to={`/meals/${category.idMeal}`}>
-									<div className='category-meal-wrapper'>
-										<img className='meal-img' src={category.strMealThumb} alt='' />
-										<h3 className='category-meal-name'>{category.strMeal}</h3>
-									</div>
-								</Link>
+								<MealCard meal={category} />
 							</li>
 						);
 					})}

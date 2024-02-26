@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Meal } from '../../types';
 import { fetchData } from '../../utils';
 import { RootLayout } from '../templates/RootLayout';
-import { Link } from 'react-router-dom';
+import { MealCard } from '../molecules/MealCard';
+import { Button } from '../atoms/Button';
 
 const randomMealUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
 
@@ -29,22 +30,8 @@ function Homepage() {
 		<>
 			<RootLayout>
 				<h2 className='header'>Meal of the day</h2>
-				<div className='wrapper'>
-					{meal ? (
-						<Link to={`/meals/${meal.idMeal}`}>
-							<div>
-								<h2>{meal.strMeal}</h2>
-								<img className='meal-img' src={meal.strMealThumb} alt={meal.strMeal} />
-								<p className='meal-description'>{meal.strInstructions}</p>
-							</div>
-						</Link>
-					) : (
-						<p>Loading...</p>
-					)}
-				</div>
-				<button className='btn-find' onClick={handleRandomMealClick}>
-					Find different meal
-				</button>
+				{meal ? <MealCard meal={meal} /> : <p>Loading...</p>}
+				<Button handleClick={handleRandomMealClick}>Find different meal</Button>
 			</RootLayout>
 		</>
 	);
