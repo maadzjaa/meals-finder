@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom';
 import { fetchData } from '../../utils';
 import { useEffect, useState } from 'react';
 import { CategoryMeal } from '../../types';
+import { RootLayout } from '../templates/RootLayout';
+import { Link } from 'react-router-dom';
 
 const mealFromCategoryUrl = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 
@@ -19,7 +21,7 @@ export function CategoriesPage() {
 	}, [category]);
 
 	return (
-		<>
+		<RootLayout>
 			<h2 className='category-meal-header'>
 				All meals from category: <span className='category-meal-header-s'>{category}</span>
 			</h2>
@@ -28,14 +30,16 @@ export function CategoriesPage() {
 					categoryMeal.map((category) => {
 						return (
 							<li className='category-list-item'>
-								<div className='category-meal-wrapper'>
-									<img className='meal-img' src={category.strMealThumb} alt='' />
-									<h3 className='category-meal-name'>{category.strMeal}</h3>
-								</div>
+								<Link to={`/meals/${category.idMeal}`}>
+									<div className='category-meal-wrapper'>
+										<img className='meal-img' src={category.strMealThumb} alt='' />
+										<h3 className='category-meal-name'>{category.strMeal}</h3>
+									</div>
+								</Link>
 							</li>
 						);
 					})}
 			</ul>
-		</>
+		</RootLayout>
 	);
 }

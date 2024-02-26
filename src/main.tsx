@@ -11,8 +11,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 		<Router>
 			<Routes>
 				<Route path='/' element={<Homepage />} />
-				<Route path='categories/:category' element={<CategoriesPage />} />
-				<Route path='/:id' element={<SingleMealPage />}/>
+				<Route path='/categories/:category' element={<CategoriesPage />} />
+				<Route path='/meals/:id' element={<SingleMealPage />} />
 			</Routes>
 		</Router>
 	</React.StrictMode>
