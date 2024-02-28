@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Meal } from '../../types';
 import { fetchData } from '../../utils';
 import { RootLayout } from '../templates/RootLayout';
-import { MealCard } from '../molecules/MealCard';
-import { Button } from '../atoms/Button';
+
+import { RandomMeal } from '../organisms/RandomMeal';
 
 const randomMealUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
 
@@ -29,9 +29,7 @@ function Homepage() {
 	return (
 		<>
 			<RootLayout>
-				<h2 className='header'>Meal of the day</h2>
-				{meal ? <MealCard meal={meal} /> : <p>Loading...</p>}
-				<Button handleClick={handleRandomMealClick}>Find different meal</Button>
+				<RandomMeal meal={meal} handleClick={handleRandomMealClick} />
 			</RootLayout>
 		</>
 	);

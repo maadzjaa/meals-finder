@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Category } from '../../types';
 import { fetchData } from '../../utils';
 import { Link } from 'react-router-dom';
+import './CategoriesLinkList.css';
 
 const categoriesMealUrl = 'https://www.themealdb.com/api/json/v1/1/list.php?c=list';
 
@@ -18,12 +19,12 @@ export function CategoriesLinkList() {
 	}, []);
 
 	return (
-		<ul className='category-list'>
+		<ul className='category-link-list'>
 			{categories &&
 				categories.map((category) => {
 					return (
-						<li className='category-list-item'>
-							<Link to={`/categories/${category.strCategory.toLowerCase()}`}>{category.strCategory}</Link>
+						<li>
+							<Link className='category-link-list-link' to={`/categories/${category.strCategory.toLowerCase()}`}>{category.strCategory}</Link>
 						</li>
 					);
 				})}

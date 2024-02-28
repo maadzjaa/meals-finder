@@ -1,0 +1,18 @@
+.category-link-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	list-style: none;
+}
+
+.category-link-list-link {
+	text-decoration: none;
+	color: black;
+	transition: color 0.2s ease-in-out;
+
+	&:hover {
+		color: var(--red-color);
+	}
+}

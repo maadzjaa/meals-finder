@@ -1,0 +1,37 @@
+.meal-wrapper {
+	margin: 0 auto;
+	border: 1px solid rgb(9, 9, 9);
+	border-radius: 20px;
+	max-width: 300px;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.meal-link {
+	text-decoration: none;
+	color: black;
+	transition: color 0.2s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+	&:hover {
+		color: var(--red-color);
+	}
+}
+
+.meal-image {
+	width: 70%;
+	border-radius: 20px;
+	/* margin-bottom: 20px; */
+}
+
+.meal-description {
+	padding: 0 20px;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}

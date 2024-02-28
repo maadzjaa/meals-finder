@@ -1,16 +1,15 @@
 import { Link } from 'react-router-dom';
 import { Meal } from '../../types';
+import './MealCard.css';
 
 export function MealCard({ meal }: { meal: Meal }) {
 	return (
-		<div className='wrapper'>
-			<Link to={`/meals/${meal.idMeal}`}>
-				<div>
-					<h2>{meal.strMeal}</h2>
-					<img className='meal-img' src={meal.strMealThumb} alt={meal.strMeal} />
-					{meal.strInstructions && <p className='meal-description'>{meal.strInstructions}</p>}
-				</div>
+		<article className='meal-wrapper'>
+			<Link className='meal-link' to={`/meals/${meal.idMeal}`}>
+				<img className='meal-image' src={meal.strMealThumb} alt={meal.strMeal} />
+				<h2>{meal.strMeal}</h2>
+				{meal.strInstructions && <p className='meal-description'>{meal.strInstructions}</p>}
 			</Link>
-		</div>
+		</article>
 	);
 }

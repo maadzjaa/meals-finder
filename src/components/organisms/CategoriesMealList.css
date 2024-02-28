@@ -1,0 +1,16 @@
+.category-meal-header {
+	text-align: center;
+
+	span {
+		color: var(--red-color);
+	}
+}
+
+.category-meal-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	list-style: none;
+}
