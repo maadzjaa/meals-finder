@@ -23,8 +23,10 @@ export function CategoriesLinkList() {
 			{categories &&
 				categories.map((category) => {
 					return (
-						<li>
-							<Link className='category-link-list-link' to={`/categories/${category.strCategory.toLowerCase()}`}>{category.strCategory}</Link>
+						<li key={category.strCategory}>
+							<Link className='category-link-list-link' to={`/categories/${category.strCategory.toLowerCase()}`}>
+								{category.strCategory}
+							</Link>
 						</li>
 					);
 				})}

@@ -1,7 +1,5 @@
 .btn {
-	display: block;
-	margin: 0 auto;
-	padding: 20px;
+	padding: 10px 20px;
 	border: none;
 	border-radius: 10px;
 	transition: background-color 0.4s ease-in;

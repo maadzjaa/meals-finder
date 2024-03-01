@@ -16,13 +16,14 @@ export function SingleMealPage() {
 			const data = await fetchData(`${singleMealUrl}${id}`);
 			const singleMeal = data.meals[0];
 			setMeal(singleMeal);
+			console.log(singleMeal);
 		};
 		fetchMeal();
 	}, [id]);
 
 	return (
 		<RootLayout>
-		<SingleMeal meal={meal}/>
+			<SingleMeal meal={meal} />
 		</RootLayout>
 	);
 }

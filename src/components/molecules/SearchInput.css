@@ -1,0 +1,10 @@
+.search-input-wrapper {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	padding: 30px 0 10px;
+}
+
+.search-input {
+	max-height: 50px;
+}
