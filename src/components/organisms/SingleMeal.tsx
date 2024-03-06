@@ -5,7 +5,6 @@ import './SingleMeal.css';
 export function SingleMeal({ meal }: { meal: Meal | null }) {
 	const ingredientsArray = [];
 	const youtubeUrl = meal?.strYoutube ? meal.strYoutube.split('=')[1] : null;
-	console.log(youtubeUrl);
 
 	for (let i = 1; i <= 20; i++) {
 		if (!meal) {
