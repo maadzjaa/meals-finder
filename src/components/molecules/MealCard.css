@@ -1,10 +1,25 @@
-.meal-wrapper {
+/* .meal-wrapper {
+	 display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 100px;
 	margin: 0 auto;
 	border: 1px solid rgb(9, 9, 9);
 	border-radius: 20px;
 	max-width: 300px;
 	padding: 20px 0;
-	text-align: center;
+	text-align: center; } */
+.meal-wrapper {
+	display: flex;
+	justify-content: space-between; /* Adjust alignment as needed */
+	flex-wrap: wrap;
+	gap: 20px; /* Adjust the gap between articles */
+	max-width: 300px;
+	margin: 0 auto;
+	border: 1px solid rgb(9, 9, 9);
+	border-radius: 20px;
+	padding: 20px;
 }
 
 .meal-link {
@@ -25,10 +40,14 @@
 .meal-image {
 	width: 70%;
 	border-radius: 20px;
-	/* margin-bottom: 20px; */
+}
+
+.meal-name {
+	text-align: center;
 }
 
 .meal-description {
+	text-align: center;
 	padding: 0 20px;
 	display: -webkit-box;
 	-webkit-line-clamp: 4;

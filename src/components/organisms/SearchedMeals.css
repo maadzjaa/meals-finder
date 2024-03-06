@@ -1,0 +1,14 @@
+.searched-meal-p {
+	text-align: center;
+	padding: 20px;
+}
+
+.searched-meals-wrapper {
+	max-width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
