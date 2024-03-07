@@ -1,5 +1,5 @@
-import { MainHeader } from '../atoms/MainHeader';
-import { CategoriesLinkList } from '../organisms/CategoriesLinkList';
+import { MainHeader } from '../atoms/MainHeader/MainHeader';
+import { CategoriesLinkList } from '../organisms/CategoriesLinkList/CategoriesLinkList';
 
 export function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (

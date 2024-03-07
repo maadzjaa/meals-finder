@@ -3,7 +3,7 @@ import { fetchData } from '../../utils';
 import { useEffect, useState } from 'react';
 import { Meal } from '../../types';
 import { RootLayout } from '../templates/RootLayout';
-import { CategoriesMealList } from '../organisms/CategoriesMealList';
+import { CategoriesMealList } from '../organisms/CategoriesMealList/CategoriesMealList';
 
 const mealFromCategoryUrl = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=';
 

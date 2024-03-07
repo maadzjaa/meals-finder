@@ -1,5 +1,5 @@
-import { MealCard } from '../molecules/MealCard';
-import { Meal } from '../../types';
+import { MealCard } from '../../molecules/MealCard/MealCard';
+import { Meal } from '../../../types';
 import './CategoriesMealList.css';
 
 export function CategoriesMealList({ categoryMeals, category }: { categoryMeals: Meal[]; category: string | undefined }) {

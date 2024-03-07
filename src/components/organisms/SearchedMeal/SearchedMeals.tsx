@@ -1,5 +1,5 @@
-import { Meal } from '../../types';
-import { MealCard } from '../molecules/MealCard';
+import { Meal } from '../../../types';
+import { MealCard } from '../../molecules/MealCard/MealCard';
 import './SearchedMeals.css';
 
 export function SearchedMeals({ meals }: { meals: Meal[] | null }) {

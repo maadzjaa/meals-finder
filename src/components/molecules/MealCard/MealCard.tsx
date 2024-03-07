@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Meal } from '../../types';
+import { Meal } from '../../../types';
 import './MealCard.css';
 
 export function MealCard({ meal }: { meal: Meal }) {

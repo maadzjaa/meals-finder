@@ -1,4 +1,4 @@
-import { ClickHandler } from '../../types';
+import { ClickHandler } from '../../../types';
 import './Button.css';
 
 export function Button({ handleClick, children }: { handleClick: ClickHandler; children: React.ReactNode }) {

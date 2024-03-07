@@ -3,7 +3,7 @@ import { fetchData } from '../../utils';
 import { useParams } from 'react-router-dom';
 import { Meal } from '../../types';
 import { RootLayout } from '../templates/RootLayout';
-import { SingleMeal } from '../organisms/SingleMeal';
+import { SingleMeal } from '../organisms/SingleMeal/SingleMeal';
 
 const singleMealUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
 

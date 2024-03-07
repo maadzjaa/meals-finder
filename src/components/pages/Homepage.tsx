@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { Meal } from '../../types';
 import { fetchData } from '../../utils';
 import { RootLayout } from '../templates/RootLayout';
-import { SearchInput } from '../molecules/SearchInput';
+import { SearchInput } from '../molecules/SearchInput/SearchInput';
 
-import { RandomMeal } from '../organisms/RandomMeal';
-import { SearchedMeals } from '../organisms/SearchedMeals';
+import { RandomMeal } from '../organisms/RandomMeal/RandomMeal';
+import { SearchedMeals } from '../organisms/SearchedMeal/SearchedMeals';
 
 const randomMealUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
 const searchMealUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';

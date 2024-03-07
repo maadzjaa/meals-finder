@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Meal } from '../../types';
+import { Meal } from '../../../types';
 import './SingleMeal.css';
 
 export function SingleMeal({ meal }: { meal: Meal | null }) {

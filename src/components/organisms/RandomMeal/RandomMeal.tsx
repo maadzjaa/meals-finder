@@ -1,6 +1,6 @@
-import { MealCard } from '../molecules/MealCard';
-import { Button } from '../atoms/Button';
-import { Meal, ClickHandler } from '../../types';
+import { MealCard } from '../../molecules/MealCard/MealCard';
+import { Button } from '../../atoms/Button/Button';
+import { Meal, ClickHandler } from '../../../types';
 import './RandomMeal.css';
 
 export function RandomMeal({ meal, handleClick }: { meal: Meal | null; handleClick: ClickHandler }) {
