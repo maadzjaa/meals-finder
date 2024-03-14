@@ -1,4 +1,4 @@
-import { Button } from '../../atoms/Button/Button';
+import { Link } from 'react-router-dom';
 import './SearchInput.css';
 import { ChangeEvent } from 'react';
 
@@ -16,7 +16,9 @@ export function SearchInput({ searchValue, onSearchChange, onSearchClick }: Sear
 	return (
 		<div className='search-input-wrapper'>
 			<input className='search-input' type='text' value={searchValue} onChange={handleInputChange} />
-			<Button handleClick={onSearchClick}>Find a meal</Button>
+			<Link to={`/search?query=${searchValue} `} className='search-link' onClick={onSearchClick}>
+				Find a meal
+			</Link>
 		</div>
 	);
 }

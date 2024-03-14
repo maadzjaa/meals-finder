@@ -12,3 +12,8 @@
 	flex-wrap: wrap;
 	gap: 20px;
 }
+
+.searched-meals-page-heading {
+	padding: 20px;
+	text-align: center;
+}
